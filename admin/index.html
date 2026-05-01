@@ -14432,7 +14432,8 @@ vless://7b102311-43fd-4e8f-977e-8090623c101d@edt-pages.github.io:443?security=tl
             option.textContent = 'Sublink Worker[link.jiwei.ccwu.cc]';
             selectEl.appendChild(option);
 
-            if (currentValue && currentValue.trim()) {
+            try {
+                if (currentValue && currentValue.trim()) {
                     const currentValueLower = currentValue.trim().toLowerCase();
                     const matchedOption = Array.from(selectEl.options).find(
                         opt => opt.value.toLowerCase() === currentValueLower
